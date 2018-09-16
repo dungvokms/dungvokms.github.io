@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/favicon.ico?v=2" type="image/x-icon">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://sylhare.github.io/2018/09/10/guide-to-lombok.html">
 
     <!-- RSS -->
-    <link rel="alternate" type="application/atom+xml" title="Type on Strap" href="https://sylhare.github.io///feed.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Quick Dev" href="https://sylhare.github.io///feed.xml"/>
 
     <!-- Font Awesome -->
     <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
@@ -46,21 +46,21 @@
 <meta name="generator" content="Jekyll v3.8.3" />
 <meta property="og:title" content="Guide to lombok" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Have you ever heard of Lombok?" />
-<meta property="og:description" content="Have you ever heard of Lombok?" />
+<meta name="description" content="Have you ever heard Lombok?" />
+<meta property="og:description" content="Have you ever heard Lombok?" />
 <link rel="canonical" href="https://sylhare.github.io/2018/09/10/guide-to-lombok.html" />
 <meta property="og:url" content="https://sylhare.github.io/2018/09/10/guide-to-lombok.html" />
 <meta property="og:site_name" content="Type on Strap" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-10T00:00:00+07:00" />
 <script type="application/ld+json">
-{"url":"https://sylhare.github.io/2018/09/10/guide-to-lombok.html","headline":"Guide to lombok","dateModified":"2018-09-10T00:00:00+07:00","datePublished":"2018-09-10T00:00:00+07:00","description":"Have you ever heard of Lombok?","mainEntityOfPage":{"@type":"WebPage","@id":"https://sylhare.github.io/2018/09/10/guide-to-lombok.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://sylhare.github.io/2018/09/10/guide-to-lombok.html","headline":"Guide to lombok","dateModified":"2018-09-10T00:00:00+07:00","datePublished":"2018-09-10T00:00:00+07:00","description":"Have you ever heard Lombok?","mainEntityOfPage":{"@type":"WebPage","@id":"https://sylhare.github.io/2018/09/10/guide-to-lombok.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- Manual seo tags -->
     <!--
-    <title>Guide to lombok | Type on Strap</title>
-    <meta name="description" content="Have you ever heard of Lombok?">
+    <title>Guide to lombok | Quick Dev</title>
+    <meta name="description" content="Have you ever heard Lombok?">
     -->
 </head>
 
@@ -70,11 +70,11 @@
     <!-- Logo and title -->
 	<div class="branding">
 		<a href="/">
-			<img class="avatar" src="/assets/img/triangle.svg" alt=""/>
+			<img class="avatar" src="/assets/img/logo/qd.png" alt=""/>
 		</a>
 
 		<h1 class="site-title">
-			<a href="/">Type on Strap</a>
+			<a href="/">Quick Dev</a>
 		</h1>
 	</div>
     
@@ -89,6 +89,67 @@
         <!-- Auto Generation of NORMAL pages in the navbar -->
         
         
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/java">
+                Java
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/spring">
+                Spring
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/clean-code">
+                Clean Code
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/coding-practices">
+                Coding Practices
+            </a>
+        </li>
+        
         
         
         
@@ -97,47 +158,9 @@
         <li class="separator"> | </li>
         <li>
             <a class="clear" href="/about/">
-                About
+                About me
             </a>
         </li>
-        
-        
-        
-        
-        
-        
-        
-        
-        <li class="separator"> | </li>
-        <li>
-            <a class="clear" href="/gallery/">
-                Gallery
-            </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <li class="separator"> | </li>
-        <li>
-            <a class="clear" href="/portfolio/">
-                Portfolio
-            </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -179,7 +202,7 @@
   </header>
   <section class="post-content">
   
-    <p><em>Have you ever heard of Lombok?</em></p>
+    <p><em>Have you ever heard Lombok?</em></p>
 
 <p><em>If you’ve worked in Java projects that have too many getters/setters and/or boilerplate code.</em></p>
 
@@ -253,30 +276,18 @@
 
 <h3 id="2-gettersetter">[2] Getter/Setter</h3>
 
-<p>If you find that creating setters/getters is tedious and make the useless code
-Then Lombok can help you with that through <strong>@Getter</strong> and <strong>@Setter</strong></p>
+<p>If you find that creating setters/getters is tedious and make the useless code</p>
+
+<p>Then Lombok can help you with that through <strong>@Getter</strong> and <strong>@Setter</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Customer</span> <span class="o">{</span>
- 
     <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
- 
     <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
  
-    <span class="kd">public</span> <span class="n">Long</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
-    <span class="o">}</span>
- 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="n">Long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
-    <span class="o">}</span>
- 
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
-    <span class="o">}</span>
- 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
-    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">Long</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">id</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="n">Long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span> 
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -296,12 +307,13 @@ Then Lombok can help you with that through <strong>@Getter</strong> and <strong>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>The example is just two fields but in practice, a class can probably contain 20 fields so using Lombok can help us a lot</p>
+<p>The example is just two fields, but in practice a class can probably contain 20 fields so using Lombok can help us a lot</p>
 
 <h3 id="3-cleanup">[3] Cleanup</h3>
 
-<p>Have you ever create InputStream/OutputStream and forgot to close them
-Or you get annoyed with try/catch/finally block to close them</p>
+<p>Have you ever create <code class="highlighter-rouge">InputStream/OutputStream</code> and forgot to close them</p>
+
+<p>Or you get annoyed with <code class="highlighter-rouge">try/catch/finally</code> block to close them</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">String</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="o">;</span>
 <span class="n">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
@@ -316,7 +328,6 @@ Or you get annoyed with try/catch/finally block to close them</p>
         <span class="k">if</span> <span class="o">(</span><span class="n">val</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">break</span><span class="o">;</span>
         <span class="o">}</span>
- 
         <span class="n">os</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">val</span><span class="o">);</span>
     <span class="o">}</span>
  
@@ -326,15 +337,15 @@ Or you get annoyed with try/catch/finally block to close them</p>
     <span class="k">if</span> <span class="o">(</span><span class="n">is</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">is</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
     <span class="o">}</span>
- 
     <span class="k">if</span> <span class="o">(</span><span class="n">os</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">os</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Lombok can call <code class="highlighter-rouge">.close()</code> method for you at the end of the scope you are in
-Or whatever method name you’ve specified in <code class="highlighter-rouge">@Cleanup</code>. For example <code class="highlighter-rouge">@Cleanup("dispose")</code></p>
+<p>Lombok can call <code class="highlighter-rouge">.close()</code> method for you at the end of the scope you are in</p>
+
+<p>Or whatever method name you’ve specified in <code class="highlighter-rouge">@Cleanup</code>. For example <code class="highlighter-rouge">@Cleanup("dispose")</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">String</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="o">;</span>
 <span class="nd">@Cleanup</span> <span class="n">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ByteArrayInputStream</span><span class="o">(</span><span class="n">greeting</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
@@ -345,27 +356,25 @@ Or whatever method name you’ve specified in <code class="highlighter-rouge">@C
     <span class="k">if</span> <span class="o">(</span><span class="n">val</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">break</span><span class="o">;</span>
     <span class="o">}</span>
- 
     <span class="n">os</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">val</span><span class="o">);</span>
-<span class="o">}</span>
- 
+<span class="o">}</span> 
+
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">os</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+
+<span class="c1">// don't need to call close</span>
 </code></pre></div></div>
 
 <p>And your InputStream and OutputStream are closed.
 To prove that @Cleanup is working, let’s see a simple example below</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CleanupWork</span> <span class="o">{</span>
- 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">{</span>
             <span class="nd">@Cleanup</span> <span class="n">MustBeClosedService</span> <span class="n">service</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MustBeClosedService</span><span class="o">();</span>
             <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello service"</span><span class="o">);</span>
         <span class="o">}</span>
- 
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Ended"</span><span class="o">);</span>
     <span class="o">}</span>
- 
 <span class="o">}</span>
  
 <span class="kd">class</span> <span class="nc">MustBeClosedService</span> <span class="kd">implements</span> <span class="n">AutoCloseable</span> <span class="o">{</span>
@@ -374,6 +383,13 @@ To prove that @Cleanup is working, let’s see a simple example below</p>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"MustBeClosedService closed"</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; Hello service
+&gt;&gt; MustBeClosedService closed
+&gt;&gt; Ended
 </code></pre></div></div>
 
 <p>Because MustBeClosedService has close() method so @Cleanup will call close after the scope</p>
@@ -446,6 +462,8 @@ To prove that @Cleanup is working, let’s see a simple example below</p>
     <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">firstName</span><span class="o">;</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span>
+
+    <span class="c1">// other fields can be added without generate a new all arguments constructor</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -604,8 +622,8 @@ To prove that @Cleanup is working, let’s see a simple example below</p>
       <p><i class="fa fa-tag fa-fw"></i> boilerplate</p>
     </a>
     
-    <a class="button" href="/tags#coding+practices">
-      <p><i class="fa fa-tag fa-fw"></i> coding practices</p>
+    <a class="button" href="/tags#coding-practices">
+      <p><i class="fa fa-tag fa-fw"></i> coding-practices</p>
     </a>
     
     <a class="button" href="/tags#java">
@@ -631,28 +649,37 @@ To prove that @Cleanup is working, let’s see a simple example below</p>
   
   <div id="previous-post" class="post-nav-post">
       <p>Previous post</p>
-      <a href="/2014/11/30/sample-post.html">
-        Sample post
+      <a href="/2018/08/26/manage-files-with-spring-boot-and-minio.html">
+        Manage files with Spring Boot and Minio (compatible with Amazon S3 APIs)
       </a>
   </div>
   
+  
+  <div id="next-post" class="post-nav-post">
+      <p>Next post</p>
+      <a href="/2018/09/15/seperate-of-concerns-with-spring-events-and-aop.html">
+        Seperate of concerns with Spring events and AOP
+      </a>
+  </div>
   
 </div>
 
     </div>
     
 <footer class="site-footer">
-    <p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+    <p class="text"><strong>Dzung Vo</strong> <p>My email address: <strong>vndung147@gmail.com</strong></p>
 </p>
             <div class="footer-icons">
                 <ul>
                 <!-- Social icons from Font Awesome, if enabled -->
                 
+
+
 <li>
-	<a href="https://sylhare.github.io/feed.xml" title="Follow RSS feed">
+	<a href="mailto:vndung147@gmail.com" title="Email">
 		<span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
         </span>
 	</a>
 </li>
@@ -669,10 +696,8 @@ To prove that @Cleanup is working, let’s see a simple example below</p>
 
 
 
-
-
 <li>
-	<a href="https://github.com/sylhare" title="Follow on GitHub">
+	<a href="https://github.com/dungvokms" title="Follow on GitHub">
 		<span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-github fa-stack-1x fa-inverse"></i>
