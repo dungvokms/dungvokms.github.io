@@ -5,7 +5,7 @@
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
         <link>https://sylhare.github.io/</link>
         <description></description>
-        <pubDate>Mon, 24 Sep 2018 21:31:38 +0700</pubDate>
+        <pubDate>Mon, 24 Sep 2018 21:35:17 +0700</pubDate>
         
         <item>
             <title>Sending email using Spring Boot</title>
@@ -31,9 +31,9 @@
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;The first thing you need to do is allow Gmail to send emails from your app&lt;/p&gt;
+    &lt;p&gt;The first thing you need to do is allow Gmail to send emails from your app.&lt;/p&gt;
 
-    &lt;p&gt;Go to &lt;a href=&quot;https://myaccount.google.com/lesssecureapps&quot; target=&quot;_blank&quot;&gt;https://myaccount.google.com/lesssecureapps&lt;/a&gt;&lt;/p&gt;
+    &lt;div&gt;Go to &lt;a href=&quot;https://myaccount.google.com/lesssecureapps&quot; target=&quot;_blank&quot;&gt;https://myaccount.google.com/lesssecureapps&lt;/a&gt;&lt;/div&gt;
 
     &lt;p&gt;&lt;img src=&quot;/assets/img/email/less-secure-app.png&quot; alt=&quot;Turn on less secure&quot; /&gt;&lt;/p&gt;
 
