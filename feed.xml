@@ -5,7 +5,7 @@
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
         <link>https://sylhare.github.io/</link>
         <description></description>
-        <pubDate>Mon, 24 Sep 2018 21:17:04 +0700</pubDate>
+        <pubDate>Mon, 24 Sep 2018 21:31:38 +0700</pubDate>
         
         <item>
             <title>Sending email using Spring Boot</title>
@@ -14,7 +14,7 @@
             <description>&lt;p&gt;&lt;em&gt;In this post, we will go to steps to configure sending email using Spring Boot and Gmail as the mail provider&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;You can find the sample code at repo:
-&lt;a href=&quot;https://github.com/dungvokms/demo-email-spring-boot&quot; target=&quot;_blank&quot;&gt;https://github.com/dungvokms/demo-email-spring-boot&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://github.com/dungvokms/demo-projects/tree/master/demo-email&quot; target=&quot;_blank&quot;&gt;Demo email&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;table-of-contents&quot;&gt;Table of contents&lt;/h3&gt;
 
@@ -123,7 +123,7 @@
 
 &lt;p&gt;In the next post, I will demonstrate how to use Mail with Thymeleaf to send a email with a specified template.&lt;/p&gt;
 
-&lt;p&gt;You can find the sample code at &lt;a href=&quot;&amp;lt;https://github.com/dungvokms/demo-email-spring-boot&amp;gt;&quot; target=&quot;_blank&quot;&gt;Github repo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can find the sample code at &lt;a href=&quot;https://github.com/dungvokms/demo-projects/tree/master/demo-email&quot; target=&quot;_blank&quot;&gt;Github repo&lt;/a&gt;&lt;/p&gt;
 </description>
             <pubDate>Mon, 17 Sep 2018 00:00:00 +0700</pubDate>
         </item>
