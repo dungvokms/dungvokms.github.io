@@ -5,7 +5,92 @@
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
         <link>https://sylhare.github.io/</link>
         <description></description>
-        <pubDate>Mon, 24 Sep 2018 21:35:17 +0700</pubDate>
+        <pubDate>Fri, 28 Sep 2018 23:28:52 +0700</pubDate>
+        
+        <item>
+            <title>Recover Postgres password when forgetting it in Centos</title>
+            <link>/2018/09/28/forget-postgres-password-centos.html</link>
+            <guid isPermaLink="true">/2018/09/28/forget-postgres-password-centos.html</guid>
+            <description>&lt;p&gt;&lt;em&gt;Have you ever forget Postgres password after a long time installed it?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In this post, we will go through steps to recover your Postgres password in Centos (Linux environment)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;1-login-with-postgres-user&quot;&gt;1. Login with Postgres user&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;su - postgres
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You will be asked to enter your password or enter new password&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;2-open-the-file-varlibpgsql96datapg_hbaconf&quot;&gt;2. Open the file &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/lib/pgsql/9.6/data/pg_hba.conf&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;Or &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/lib/pgsql/&amp;lt;YOUR_VERSION&amp;gt;/data/pg_hba.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Change the line&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;local all all md5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;to&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;local all all trust
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Remember to change it back to &lt;code class=&quot;highlighter-rouge&quot;&gt;md5&lt;/code&gt; later&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;3-restart-the-postgres-server&quot;&gt;3. Restart the Postgres server&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;service postgresql-9.6.service restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Change the number &lt;code class=&quot;highlighter-rouge&quot;&gt;9.6&lt;/code&gt; to your postgres version&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;4-change-postgres-password&quot;&gt;4. Change postgres password&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;psql &lt;span class=&quot;nt&quot;&gt;-U&lt;/span&gt; postgres
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It will not asked your password&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;\password&lt;/code&gt; to change the password. And then type &lt;code class=&quot;highlighter-rouge&quot;&gt;\q&lt;/code&gt; to exit&lt;/p&gt;
+
+&lt;h4 id=&quot;5-then-go-back-to-varlibpgsql96datapg_hbaconf&quot;&gt;5. Then go back to &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/lib/pgsql/9.6/data/pg_hba.conf&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;And change back the line&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;local all all trust
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;local all all md5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;6-restart-the-postgres-server-again&quot;&gt;6. Restart the Postgres server again&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;service postgresql-9.6.service restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Change the number &lt;code class=&quot;highlighter-rouge&quot;&gt;9.6&lt;/code&gt; to your postgres version&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;7-finally&quot;&gt;7. Finally&lt;/h4&gt;
+
+&lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;psql -U postgres&lt;/code&gt; and enter your new password&lt;/p&gt;
+
+&lt;p&gt;That’s it! That all you need to do to recover your postgres password&lt;/p&gt;
+</description>
+            <pubDate>Fri, 28 Sep 2018 00:00:00 +0700</pubDate>
+        </item>
         
         <item>
             <title>Sending email using Spring Boot</title>
