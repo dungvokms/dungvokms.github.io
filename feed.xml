@@ -3,9 +3,9 @@
     <channel>
         <title>Quick Dev</title>
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <link>https://sylhare.github.io/</link>
+        <link>https://dungvokms.github.io/</link>
         <description></description>
-        <pubDate>Sat, 05 Jan 2019 12:02:26 +0700</pubDate>
+        <pubDate>Sat, 05 Jan 2019 12:08:47 +0700</pubDate>
         
         <item>
             <title>[Issue] [IntelliJ] Import Gradle projects and got errors</title>
