@@ -5,7 +5,30 @@
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
         <link>https://sylhare.github.io/</link>
         <description></description>
-        <pubDate>Fri, 28 Sep 2018 23:28:52 +0700</pubDate>
+        <pubDate>Sat, 05 Jan 2019 12:02:26 +0700</pubDate>
+        
+        <item>
+            <title>[Issue] [IntelliJ] Import Gradle projects and got errors</title>
+            <link>/2019/01/05/error-import-gradle-project.html</link>
+            <guid isPermaLink="true">/2019/01/05/error-import-gradle-project.html</guid>
+            <description>&lt;p&gt;Suppose that you want to import a Gradle projects from Github, Bitbucket, Gitlab and you have the below error when importing to IntelliJ&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;No cached version available for offline mode&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gradle/gradle-import-issue.png&quot; alt=&quot;Error&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So to fix this issue, go to IntelliJ settings/preferences, search for Gradle, and &lt;strong&gt;uncheck the Offline work&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gradle/gradle-offline-mode.png&quot; alt=&quot;Fixing error&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Re-import project and it should work!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gradle/gradle-reimport.png&quot; alt=&quot;Re-import&quot; /&gt;&lt;/p&gt;
+</description>
+            <pubDate>Sat, 05 Jan 2019 00:00:00 +0700</pubDate>
+        </item>
         
         <item>
             <title>Recover Postgres password when forgetting it in Centos</title>

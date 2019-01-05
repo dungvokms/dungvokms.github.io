@@ -2,6 +2,16 @@
   
    
       {
+        "title"    : "[Issue] [IntelliJ] Import Gradle projects and got errors",
+        "category" : "",
+        "tags"     : " issue, intelliJ, gradle",
+        "url"      : "/2019/01/05/error-import-gradle-project.html",
+        "date"     : "January 5, 2019",
+        "excerpt"  : "<p>Suppose that you want to import a Gradle projects from Github, Bitbucket, Gitlab and you have the below error when importing to IntelliJ</p>\n\n<blockquote>\n  <p>No cached version available for offline mode</p>\n</blockquote>\n\n<p><img src=\"/assets...",
+        "content"  : "<p>Suppose that you want to import a Gradle projects from Github, Bitbucket, Gitlab and you have the below error when importing to IntelliJ</p>\n\n<blockquote>\n  <p>No cached version available for offline mode</p>\n</blockquote>\n\n<p><img src=\"/assets/img/gradle/gradle-import-issue.png\" alt=\"Error\" /></p>\n\n<p>So to fix this issue, go to IntelliJ settings/preferences, search for Gradle, and <strong>uncheck the Offline work</strong></p>\n\n<p><img src=\"/assets/img/gradle/gradle-offline-mode.png\" alt=\"Fixing error\" /></p>\n\n<p>Re-import project and it should work!</p>\n\n<p><img src=\"/assets/img/gradle/gradle-reimport.png\" alt=\"Re-import\" /></p>\n"
+      } ,
+   
+      {
         "title"    : "Recover Postgres password when forgetting it in Centos",
         "category" : "",
         "tags"     : " postgres, linux, centos",
