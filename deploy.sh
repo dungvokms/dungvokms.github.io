@@ -8,4 +8,6 @@ git add .
 
 git commit -m "Update blog"
 
+git pull origin master
+
 git push origin master
